@@ -1,2 +1,2 @@
-# Java_Smal_Apps
+# Java_Small_Apps
 my Apps
