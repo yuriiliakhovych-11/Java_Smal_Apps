@@ -60,7 +60,7 @@ public class MemoryGame extends Application {
         HBox hBox4 = new HBox();
         hBox4.setAlignment(Pos.CENTER);
 
-        // Ініціалізація масивів (використовуємо поля класу)
+
         animals = new ImageView[] {
             new ImageView(imgHorse), new ImageView(imgHorse),
             new ImageView(imgCow), new ImageView(imgCow),
@@ -114,7 +114,7 @@ public class MemoryGame extends Application {
             
             for (int i = 0; i < 12; i++) {
                 buttons[i].setGraphic(animals[i]);
-                buttons[i].setDisable(false);  // Дозволяємо кліки на всі кнопки
+                buttons[i].setDisable(false);  
             }
 
             PauseTransition pause = new PauseTransition(Duration.seconds(3));
@@ -123,7 +123,7 @@ public class MemoryGame extends Application {
                     buttons[i].setGraphic(imgClose[i]);
                 }
                 btnNewGame.setDisable(false);
-                firstOpenedIndex = -1;  // Скидаємо стан гри
+                firstOpenedIndex = -1;  
                 pairsFound = 0;
             });
             pause.play();
@@ -153,7 +153,7 @@ public class MemoryGame extends Application {
                 pairsFound++;
                 
                 if (pairsFound == 6) {
-                    showWinWindow(); // Викликаємо метод для вікна перемоги
+                    showWinWindow(); 
                 }
             } else {
                 PauseTransition pause = new PauseTransition(Duration.seconds(1));
